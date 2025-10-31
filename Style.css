@@ -390,7 +390,17 @@ body, p, label, input, textarea, select, button {
   100% { transform: translateY(0); }
 }
 
+.who-image-animated {
+  animation: waveFloat 5s ease-in-out infinite;
 }
+
+@keyframes waveFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+
 
 
 
