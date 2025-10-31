@@ -547,6 +547,13 @@ body, p, label, input, textarea, select, button {
 }
 
 
+.step-message {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #333;
+}
+
 
 
 
