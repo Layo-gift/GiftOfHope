@@ -410,7 +410,60 @@ body, p, label, input, textarea, select, button {
   border: 3px solid red;
 }
 
+/* FORM RESET */
+.contact-form {
+  max-width: 600px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
+
+/* LABELS */
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  display: block;
+  font-size: 20px;
+}
+
+/* INPUTS */
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+/* RADIO BUTTONS */
+.radio-group {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+/* SEND BUTTON */
+.contact-form button {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.contact-form button:hover {
+  background-color: #e67e22;
+}
+
+
 
 
 
