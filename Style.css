@@ -503,6 +503,50 @@ body, p, label, input, textarea, select, button {
 }
 
 
+.sunrise-message {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+.vision-message {
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.help-message {
+  font-size: 26px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 30px;
+}
+
+.how-it-works h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+}.how-it-works p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.contact-form label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  font-size: 18px;
+}
+
+
 
 
 
