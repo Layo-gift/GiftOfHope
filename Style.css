@@ -299,13 +299,98 @@ h1, h2, h3, .section-title, .section-header {
   font-size: 28px;
   text-shadow: 0 0 10px #fdd9a0;
   color: #2c3e50;
+    
 }
+  
 .section-title {
   font-size: 28px;
   text-shadow: 0 0 10px #fdd9a0;
   color: #2c3e50;
 }
 
+
+/* Global Font Size */
+body, p, label, input, textarea, select, button {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* Bold Section Headers */
+.section-title, .how-it-works h2 {
+  font-size: 32px;/* Form Layout */
+.contact-form {
+  max-width: 600px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+/* Radio Buttons */
+.radio-group {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+/* Send Button */
+.contact-form button {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.contact-form button:hover {
+  background-color: #e67e22;
+}
+
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 10px #fdd9a0;
+  color: #2c3e50;.animated-tree {
+  animation: swayTree 6s ease-in-out infinite;
+}
+
+.paper-image {
+  animation: rippleFloat 5s ease-in-out infinite;
+}
+
+@keyframes swayTree {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes rippleFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+}
 
 
 
