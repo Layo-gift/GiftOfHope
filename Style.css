@@ -406,8 +406,12 @@ body, p, label, input, textarea, select, button {
 @keyframes waveFloat {
   0% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
+  100% { transform: translateY(0); }.who-image-animated {
+  border: 3px solid red;
 }
+
+}
+
 
 
 
