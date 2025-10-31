@@ -462,6 +462,10 @@ body, p, label, input, textarea, select, button {
 .contact-form button:hover {
   background-color: #e67e22;
 }
+.contact-form button {
+  box-shadow: 0 0 12px #f39c12;
+}
+
 
 
 
