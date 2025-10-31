@@ -555,6 +555,24 @@ body, p, label, input, textarea, select, button {
 }
 
 
+.welcome-title {
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 8px;
+  margin-bottom: 30px;
+  color: #002147;
+  text-align: center;
+}
+
+.welcome-message {
+  font-size: 24px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  color: #333;
+}
+
 
 
 
