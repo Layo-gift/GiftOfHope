@@ -600,6 +600,20 @@ body, p, label, input, textarea, select, button {
   color: #333;
 }
 
+.animated-tree {
+  width: 100%;
+  max-width: 400px;
+  animation: waveFloat 5s ease-in-out infinite;
+  display: block;
+  margin: 0 auto;
+}
+
+@keyframes waveFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
 
 
 
