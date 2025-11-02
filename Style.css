@@ -614,6 +614,16 @@ body, p, label, input, textarea, select, button {
   100% { transform: translateY(0); }
 }
 
+body {
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 
 
