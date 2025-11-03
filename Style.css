@@ -1,4 +1,9 @@
 /* Reset default spacing */
+h1 {
+  color: red;
+  font-size: 50px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +11,11 @@
 }
 .contact-form {
   max-width: 600px;
-  margin: 40px auto;
+  margin: 40px auto;h1 {
+  color: red;
+  font-size: 50px;
+}
+
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -632,6 +641,7 @@ h1, h2, h3, h4, h5, h6, p {
 h1 {
   background-color: lightgreen;
 }
+
 
 
 
