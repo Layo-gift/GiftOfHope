@@ -154,18 +154,13 @@ button {
   filter: brightness(1.1);
 }
 
-/* Vision Section */
 .vision-image img {
-  max-width: 600px;
+  width: 700px;         /* Or 800px if you prefer */
   border-radius: 8px;
+  margin: 30px auto;
+  display: block;
 }
 
-.vision-description {
-  max-width: 800px;
-  font-size: 1.1em;
-  line-height: 1.6;
-  margin: 0 auto;
-}
 
 /* Form */
 .contact-form {
@@ -650,6 +645,7 @@ h1 {
   margin: 30px auto;
   display: block;
 }
+
 
 
 
