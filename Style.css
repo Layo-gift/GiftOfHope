@@ -128,7 +128,7 @@ button {
 
 /* Tree Animation */
 .animated-tree {
-  width: 500px;
+  width: 600px;
   animation: sway 4s ease-in-out infinite, pulse 6s ease-in-out infinite;
   transition: transform 0.3s ease;
 }
@@ -643,6 +643,7 @@ h1, h2, h3, h4, h5, h6, p {
 h1 {
   background-color: lightgreen;
 }
+
 
 
 
