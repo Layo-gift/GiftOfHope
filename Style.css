@@ -655,6 +655,15 @@ h1 {
   text-align: center;
 }
 
+.who-action {
+  font-size: 20px;
+  line-height: 1.7;
+  max-width: 750px;
+  margin: 20px auto;
+  color: #444;
+  text-align: center;
+}
+
 
 
 
