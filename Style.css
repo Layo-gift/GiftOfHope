@@ -644,6 +644,13 @@ h1 {
   background-color: lightgreen;
 }
 
+.vision-image img {
+  width: 600px;       /* Try 700px or 800px if you want it bigger */
+  height: auto;
+  margin: 30px auto;
+  display: block;
+}
+
 
 
 
