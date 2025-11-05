@@ -234,7 +234,8 @@ function makeItRain() {
 
   for (let i = 0; i < 20; i++) {
     const bill = document.createElement('img');
-    bill.src = 'twenty-dollar-bill.png'; // Replace with your actual image file
+   bill.src = 'Dollar-bill.png';
+
     bill.className = 'money-bill';
     bill.style.left = Math.random() * window.innerWidth + 'px';
     bill.style.animationDelay = Math.random() * 2 + 's';
@@ -248,10 +249,10 @@ function makeItRain() {
 
 document.querySelector('button[type="submit"]').addEventListener('click', makeItRain);
 </script>
-bill.src = 'Dollar-bill.png';
 
 </body>
 </html>
+
 
 
 
