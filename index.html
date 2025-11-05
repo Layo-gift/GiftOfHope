@@ -228,18 +228,16 @@
 </script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('form');
-  const button = document.querySelector('button[type="submit"]');
+  const referralInput = document.querySelector('input[name="referral-name"]');
+  const nameInput = document.querySelector('input[name="your-name"]');
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // Stop the form from submitting immediately
+  if (referralInput) {
+    referralInput.addEventListener('blur', makeItRain);
+  }
 
-    makeItRain(); // Trigger the animation
-
-    setTimeout(() => {
-      form.submit(); // Submit the form after 2 seconds
-    }, 2000); // Adjust delay if needed
-  });
+  if (nameInput) {
+    nameInput.addEventListener('blur', makeItRain);
+  }
 });
 
 function makeItRain() {
@@ -263,8 +261,10 @@ function makeItRain() {
 </script>
 
 
+
 </body>
 </html>
+
 
 
 
