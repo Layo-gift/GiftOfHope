@@ -227,6 +227,21 @@
   AOS.init();
 </script>
 <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('form');
+  const button = document.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Stop the form from submitting immediately
+
+    makeItRain(); // Trigger the animation
+
+    setTimeout(() => {
+      form.submit(); // Submit the form after 2 seconds
+    }, 2000); // Adjust delay if needed
+  });
+});
+
 function makeItRain() {
   const container = document.createElement('div');
   container.className = 'money-rain';
@@ -234,8 +249,7 @@ function makeItRain() {
 
   for (let i = 0; i < 20; i++) {
     const bill = document.createElement('img');
-   bill.src = 'Dollar-bill.png';
-
+    bill.src = 'Dollar-bill.png';
     bill.className = 'money-bill';
     bill.style.left = Math.random() * window.innerWidth + 'px';
     bill.style.animationDelay = Math.random() * 2 + 's';
@@ -246,12 +260,14 @@ function makeItRain() {
     container.remove();
   }, 4000);
 }
+</script>
 
 document.querySelector('button[type="submit"]').addEventListener('click', makeItRain);
 </script>
 
 </body>
 </html>
+
 
 
 
