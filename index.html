@@ -222,21 +222,9 @@
 <!-- AOS animation script -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init();
-</script>
+
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const referralInput = document.querySelector('input[name="referral"]');
-    const nameInput = document.querySelector('input[name="name"]');
-
-    if (referralInput) {
-      referralInput.addEventListener('blur', makeItRain);
-    }
-
-    if (nameInput) {
-      nameInput.addEventListener('blur', makeItRain);
-    }
-  });
+  AOS.init();
 
   function makeItRain() {
     console.log("makeItRain triggered");
@@ -258,14 +246,30 @@
       container.remove();
     }, 4000);
   }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const referralInput = document.querySelector('input[name="referral"]');
+    const nameInput = document.querySelector('input[name="name"]');
+
+    if (referralInput) {
+      referralInput.addEventListener('blur', makeItRain);
+    }
+
+    if (nameInput) {
+      nameInput.addEventListener('blur', makeItRain);
+    }
+  });
 </script>
+
 <button type="button" onclick="makeItRain()" class="celebrate-button">
   🌧️ Celebrate Generosity
 </button>
 
 
+
 </body>
 </html>
+
 
 
 
