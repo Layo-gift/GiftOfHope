@@ -225,18 +225,26 @@
   AOS.init();
 </script>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const referralInput = document.querySelector('input[name="referral"]');
-  const nameInput = document.querySelector('input[name="name"]');
+  document.addEventListener('DOMContentLoaded', function () {
+    const referralInput = document.querySelector('input[name="referral"]');
+    const nameInput = document.querySelector('input[name="name"]');
 
-  if (referralInput) {
-    referralInput.addEventListener('blur', makeItRain);
-  }
+    if (referralInput) {
+      referralInput.addEventListener('blur', () => {
+        console.log("Referral blur triggered");
+        alert("Referral field blurred");
+      });
+    }
 
-  if (nameInput) {
-    nameInput.addEventListener('blur', makeItRain);
-  }
-});
+    if (nameInput) {
+      nameInput.addEventListener('blur', () => {
+        console.log("Name blur triggered");
+        alert("Name field blurred");
+      });
+    }
+  });
+</script>
+
 
 function makeItRain() {
    console.log("makeItRain triggered");
@@ -267,6 +275,7 @@ function makeItRain() {
 
 </body>
 </html>
+
 
 
 
