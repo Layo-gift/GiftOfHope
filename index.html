@@ -230,19 +230,38 @@
     const nameInput = document.querySelector('input[name="name"]');
 
     if (referralInput) {
-      referralInput.addEventListener('blur', () => {
-        console.log("Referral blur triggered");
-        alert("Referral field blurred");
-      });
+      referralInput.addEventListener('blur', makeItRain);
     }
 
     if (nameInput) {
-      nameInput.addEventListener('blur', () => {
-        console.log("Name blur triggered");
-        alert("Name field blurred");
-      });
+      nameInput.addEventListener('blur', makeItRain);
     }
   });
+
+  function makeItRain() {
+    console.log("makeItRain triggered");
+
+    const container = document.createElement('div');
+    container.className = 'money-rain';
+    document.body.appendChild(container);
+
+    for (let i = 0; i < 20; i++) {
+      const bill = document.createElement('img');
+      bill.src = 'Dollar-bill.png';
+      bill.className = 'money-bill';
+      bill.style.left = Math.random() * window.innerWidth + 'px';
+      bill.style.animationDelay = Math.random() * 2 + 's';
+      container.appendChild(bill);
+    }
+
+    setTimeout(() => {
+      container.remove();
+    }, 4000);
+  }
+</script>
+
+
+  
 </script>
 
 
@@ -275,6 +294,7 @@ function makeItRain() {
 
 </body>
 </html>
+
 
 
 
