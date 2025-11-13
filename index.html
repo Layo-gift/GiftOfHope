@@ -227,8 +227,10 @@
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <script>
+  // Initialize AOS animations
   AOS.init();
 
+  // Function to create the raining bills effect
   function makeItRain() {
     console.log("makeItRain triggered");
 
@@ -238,7 +240,7 @@
 
     for (let i = 0; i < 20; i++) {
       const bill = document.createElement('img');
-   bill.src = 'https://i.imgur.com/ZKq0Z4R.png';
+      bill.src = 'https://i.imgur.com/ZKq0Z4R.png'; // ✅ working image link
       bill.className = 'money-bill';
       bill.style.left = Math.random() * window.innerWidth + 'px';
       bill.style.animationDelay = Math.random() * 2 + 's';
@@ -250,9 +252,11 @@
     }, 4000);
   }
 
+  // Attach event listeners after the page loads
   document.addEventListener('DOMContentLoaded', function () {
     const referralInput = document.querySelector('input[name="referral"]');
     const nameInput = document.querySelector('input[name="name"]');
+    const celebrateButton = document.querySelector('.celebrate-button'); // ✅ new line
 
     if (referralInput) {
       referralInput.addEventListener('blur', makeItRain);
@@ -261,14 +265,18 @@
     if (nameInput) {
       nameInput.addEventListener('blur', makeItRain);
     }
+
+    if (celebrateButton) {
+      celebrateButton.addEventListener('click', makeItRain); // ✅ connect button
+    }
   });
+</script>
 
-
-   </script>
 
 
 </body>
 </html>
+
 
 
 
