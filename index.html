@@ -4,6 +4,7 @@
    <head>
      
   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <title>Gift of Hope Community</title>
  <link rel="stylesheet" href="Style.css">
 
@@ -225,46 +226,19 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-</script>
-     <script>
-  function makeItRain() {
-    const container = document.createElement('div');
-    document.body.appendChild(container);
-
-    const bills = ['dollar20.png', 'dollar5.png', 'dollar10.png', 'dollar1.png'];
-
-    for (let i = 0; i < 20; i++) {
-      const delay = Math.random() * 3000;
-
-      setTimeout(() => {
-        const bill = document.createElement('img');
-        bill.src = bills[Math.floor(Math.random() * bills.length)];
-        bill.className = 'money-bill';
-        bill.style.left = Math.random() * window.innerWidth + 'px';
-        bill.style.animationDelay = (Math.random() * 1.5) + 's';
-        bill.style.transform = `rotate(${Math.random() * 360}deg)`;
-        container.appendChild(bill);
-      }, delay);
-    }
-
-    // Clean up after 6 seconds
-    setTimeout(() => container.remove(), 6000);
-  }
-</script>
-
+<!-- MAKE IT RAIN SCRIPT -->
 <script>
   function makeItRain() {
     const container = document.createElement('div');
     document.body.appendChild(container);
 
-    const bills = ['dollar20.png', 'dollar5.png', 'dollar10.png', 'dollar1.png'];
+    const bills = ['dollar20.png', 'dollar10.png', 'dollar5.png', 'dollar1.png'];
 
     for (let i = 0; i < 20; i++) {
       const delay = Math.random() * 3000;
-
       setTimeout(() => {
         const billFile = bills[Math.floor(Math.random() * bills.length)];
-        console.log("Trying to load:", billFile);  // 👈 This will show in console
+        console.log("Trying to load:", billFile); // shows in console
 
         const bill = document.createElement('img');
         bill.src = billFile;
@@ -279,6 +253,9 @@
     setTimeout(() => container.remove(), 6000);
   }
 </script>
+</body>
+</html>
+
 
 
 
