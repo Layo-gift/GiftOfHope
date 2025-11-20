@@ -712,6 +712,17 @@ h1 {
   }
 }
 
+.money-bill {
+  position: absolute;
+  width: 80px;   /* or whatever size you want */
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  from { top: -100px; }
+  to { top: 100vh; }
+}
+
 
 
 
