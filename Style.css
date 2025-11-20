@@ -714,6 +714,22 @@ h1 {
   background-color: #218838;
 }
 
+.money-bill {
+  position: absolute;
+  top: -120px;
+  width: 240px;   /* larger size */
+  animation: fall 4.5s linear forwards;
+  filter: brightness(1.2) contrast(1.1); /* lighten and sharpen */
+  pointer-events: none;
+  background: none;       /* no background */
+  box-shadow: none;       /* remove any shadow effect */
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
 
 
 
