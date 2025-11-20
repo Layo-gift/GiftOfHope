@@ -141,9 +141,7 @@
   <form class="contact-form" action="https://formspree.io/f/mjkpqnla" method="POST">
   <label for="referral">Referral Name:</label>
   <input type="text" id="referral" name="referral" required>
-<button type="button" onclick="makeItRain()" class="celebrate-button">
-  🌧️ Celebrate Generosity
-</button>
+<button onclick="makeItRain()">Make it Rain!</button>
 
   <label for="name">Your Name:</label>
   <input type="text" id="name" name="name" required>
@@ -240,6 +238,32 @@
     }
   });
 </script>
+     <script>
+  function makeItRain() {
+    const container = document.createElement('div');
+    document.body.appendChild(container);
+
+    const bills = ['dollar20.png', 'dollar5.png', 'dollar10.png', 'dollar1.png'];
+
+    for (let i = 0; i < 20; i++) {
+      const delay = Math.random() * 3000;
+
+      setTimeout(() => {
+        const bill = document.createElement('img');
+        bill.src = bills[Math.floor(Math.random() * bills.length)];
+        bill.className = 'money-bill';
+        bill.style.left = Math.random() * window.innerWidth + 'px';
+        bill.style.animationDelay = (Math.random() * 1.5) + 's';
+        bill.style.transform = `rotate(${Math.random() * 360}deg)`;
+        container.appendChild(bill);
+      }, delay);
+    }
+
+    // Clean up after 6 seconds
+    setTimeout(() => container.remove(), 6000);
+  }
+</script>
+
 </body>
 </html>
 
@@ -249,6 +273,7 @@
 
 </body>
 </html>
+
 
 
 
