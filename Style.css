@@ -679,25 +679,6 @@ h1 {
   color: #444;
 }
 
-.money-bill {
-  position: absolute;
-  top: -120px;
-  width: 240px;   /* larger size */
-  animation: fall 4.5s linear forwards;
-  filter: brightness(1.2) contrast(1.1);
-  pointer-events: none;
-  background: none;
-  box-shadow: none;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(100vh);
-  }
-}
-
-
-
 .celebrate-button {
   background-color: #28a745;
   color: white;
@@ -730,6 +711,7 @@ h1 {
     transform: translateY(100vh);
   }
 }
+
 
 
 
