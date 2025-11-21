@@ -228,24 +228,27 @@
 
 <!-- MAKE IT RAIN SCRIPT -->
 <script>
-  function makeItRain() {
-    const bills = ['dollar20.png', 'dollar10.png', 'dollar5.png', 'dollar1.png'];
+ function makeItRain() {
+  const bills = ['dollar20.png', 'dollar10.png', 'dollar5.png', 'dollar1.png'];
 
-    for (let i = 0; i < 20; i++) {
-      const delay = Math.random() * 3000;
-      setTimeout(() => {
-        const billFile = bills[Math.floor(Math.random() * bills.length)];
-        console.log("Trying to load:", billFile);
+  for (let i = 0; i < 20; i++) {
+    const delay = Math.random() * 3000;
+    setTimeout(() => {
+      const billFile = bills[Math.floor(Math.random() * bills.length)];
+      console.log("Trying to load:", billFile);
 
-        const bill = document.createElement('img');
-        bill.src = billFile;
-        bill.className = 'money-bill';
-        bill.style.left = Math.random() * window.innerWidth + 'px';
-        document.body.appendChild(bill);   // 👈 directly to body
-      }, delay);
-    }
+      const bill = document.createElement('img');
+      bill.src = billFile;
+      bill.alt = "money bill";   // fixes accessibility warning
+      bill.className = 'money-bill';
+      bill.style.left = Math.random() * window.innerWidth + 'px';
+      document.body.appendChild(bill);   // 👈 directly to body
+    }, delay);
   }
+}
+
 </script>
+
 
 
 
