@@ -690,17 +690,22 @@ h1 {
 }
 
 .money-bill {
-  position: fixed;          /* stays relative to the screen */
-  top: -120px;              /* start above the viewport */
-  width: 120px;             /* adjust size */
+  position: fixed;
+  top: -180px;
+  width: 280px !important;   /* force bigger size */
+  height: auto !important;   /* keep proportions */
   animation: fall 4.5s linear forwards;
-  pointer-events: none;     /* bills don’t block clicks */
+  pointer-events: none;
+  display: inline !important;   /* override global img centering */
+  margin: 0 !important;         /* prevent auto-centering */
 }
+
 
 @keyframes fall {
   from { top: -120px; }
   to { top: 100vh; }        /* fall to bottom of visible screen */
 }
+
 
 
 
