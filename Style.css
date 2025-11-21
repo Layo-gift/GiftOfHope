@@ -698,30 +698,17 @@ h1 {
 .money-bill {
   position: absolute;
   top: -120px;
-  width: 240px;   /* larger size */
+  width: 120px;   /* adjust size as you like */
   animation: fall 4.5s linear forwards;
-  filter: brightness(1.2) contrast(1.1); /* lighten and sharpen */
+  filter: brightness(1.2) contrast(1.1);
   pointer-events: none;
-  background: none;       /* no background */
-  box-shadow: none;       /* remove any shadow effect */
 }
 
 @keyframes fall {
-  to {
-    transform: translateY(100vh);
-  }
-}
-
-.money-bill {
-  position: absolute;
-  width: 80px;   /* or whatever size you want */
-  animation: fall 3s linear forwards;
-}
-
-@keyframes fall {
-  from { top: -100px; }
+  from { top: -120px; }
   to { top: 100vh; }
 }
+
 
 
 
