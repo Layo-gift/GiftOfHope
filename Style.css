@@ -691,20 +691,21 @@ h1 {
 
 .money-bill {
   position: fixed;
-  top: -180px;
-  width: 280px !important;   /* force bigger size */
-  height: auto !important;   /* keep proportions */
+  top: -180px;   /* keep this */
+  width: 280px !important;
+  height: auto !important;
   animation: fall 4.5s linear forwards;
   pointer-events: none;
-  display: inline !important;   /* override global img centering */
-  margin: 0 !important;         /* prevent auto-centering */
+  display: inline !important;
+  margin: 0 !important;
 }
-
 
 @keyframes fall {
-  from { top: -120px; }
-  to { top: 100vh; }        /* fall to bottom of visible screen */
+  from { top: -180px; }   /* match the CSS */
+  to   { top: 100vh; }
 }
+
+
 
 
 
