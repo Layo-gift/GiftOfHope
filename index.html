@@ -140,10 +140,9 @@
   <form class="contact-form" action="https://formspree.io/f/mjkpqnla" method="POST">
   <label for="referral">Referral Name:</label>
   <input type="text" id="referral" name="referral" required>
-
+  <button type="button" onclick="makeItRain()">Make it Rain!</button>
   <label for="name">Your Name:</label>
-     <button type="button" onclick="makeItRain()">Make it Rain!</button>
-
+     
   <input type="text" id="name" name="name" required>
 
 
@@ -259,16 +258,8 @@ document.body.appendChild(bill);
 </html>
 
 
-.money-bill {
-  position: fixed;
-  top: -180px;
-  width: 280px !important;   /* force bigger size */
-  height: auto !important;   /* keep proportions */
-  animation: fall 4.5s linear forwards;
-  pointer-events: none;
-  display: inline !important;   /* override global img centering */
-  margin: 0 !important;         /* prevent auto-centering */
-}
+
+
 
 
 
