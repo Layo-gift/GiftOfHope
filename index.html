@@ -241,6 +241,7 @@
         bill.src = billFile;
         bill.alt = "money bill";   // fixes accessibility warning
         bill.className = 'money-bill';
+         bill.style.top = '-180px';
          bill.style.width = `${Math.floor(Math.random() * (300 - 120) + 120)}px`;
 
         bill.style.left = Math.random() * window.innerWidth + 'px';
@@ -263,6 +264,7 @@
   display: inline !important;   /* override global img centering */
   margin: 0 !important;         /* prevent auto-centering */
 }
+
 
 
 
