@@ -223,15 +223,6 @@
 <script>
   function makeItRain() {
     const bills = ['dollar20.png', 'dollar10.png', 'dollar5.png', 'dollar1.png'];
-    console.log("makeItRain function is ready!");
-    // your bill creation code here
-  }
-</script>
-
-</body>
-</html>
-
-
 
     for (let i = 0; i < 20; i++) {
       const delay = Math.random() * 3000;
@@ -239,26 +230,28 @@
         const billFile = bills[Math.floor(Math.random() * bills.length)];
         console.log("Trying to load:", billFile);
 
-      const bill = document.createElement('img');
-bill.src = billFile;
-bill.alt = "money bill";
-bill.className = 'money-bill';
+        const bill = document.createElement('img');
+        bill.src = billFile;
+        bill.alt = "money bill";
+        bill.className = 'money-bill';
+        bill.style.position = 'fixed';
+        bill.style.top = '-120px';
+        bill.style.left = Math.floor(Math.random() * 100) + 'vw';
+        bill.style.width = '120px';
+        bill.style.zIndex = '9999';
+        bill.style.animation = `fall ${Math.random() * 3 + 3}s linear forwards`;
 
-bill.style.position = 'fixed';
-bill.style.top = '-180px';
-bill.style.left = Math.floor(Math.random() * 100) + 'vw';
-bill.style.width = `${Math.floor(Math.random() * (300 - 120) + 120)}px`;
-bill.style.zIndex = '9999';
-bill.style.animation = `fall ${Math.random() * 3 + 3}s linear forwards`;
-
-document.body.appendChild(bill);
-
+        document.body.appendChild(bill);
       }, delay);
     }
   }
 </script>
+
 </body>
 </html>
+
+
+
 
 
 
