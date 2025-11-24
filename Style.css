@@ -715,6 +715,18 @@ h1 {
   background-color: #218838;
 }
 
+/* Money Bill Styling */
+.money-bill {
+  position: absolute;       /* float freely on the page */
+  top: -120px;              /* start above the viewport */
+  width: 80px;              /* adjust size of bills */
+  height: auto;             /* keep aspect ratio */
+  z-index: 9999;            /* keep bills on top of other content */
+  pointer-events: none;     /* don’t block clicks on other elements */
+  opacity: 0.9;             /* slight transparency for realism */
+  transform: rotate(0deg);  /* initial rotation */
+}
+
 
 
 
