@@ -136,7 +136,8 @@
   <form class="contact-form" action="https://formspree.io/f/mjkpqnla" method="POST">
   <label for="referral">Referral Name:</label>
   <input type="text" id="referral" name="referral" required>
-  <button type="button" onclick="makeItRain()">Make it Rain!</button>
+ <button id="celebrate-button" class="celebrate-button">Celebrate!</button>
+
   <label for="name">Your Name:</label>
      
   <input type="text" id="name" name="name" required>
@@ -247,9 +248,58 @@
     }
   }
 </script>
+<script>
+  // Helper: dynamically add keyframes for each bill
+  function addKeyframes(name, drift) {
+    const styleSheet = document.styleSheets[0];
+    const keyframes = `
+      @keyframes ${name} {
+        0%   { transform: translateY(-120px) rotate(0deg); opacity: 1; }
+        50%  { transform: translateY(50vh) rotate(45deg) translateX(${drift/2}px); opacity: 0.9; }
+        100% { transform: translateY(100vh) rotate(90deg) translateX(${drift}px); opacity: 0; }
+      }
+    `;
+    styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+  }
+
+  function makeItRain() {
+    console.log("makeItRain function is ready!");
+    const bills = ['dollar20.png', 'dollar10.png', 'dollar5.png', 'dollar1.png'];
+
+    for (let i = 0; i < 20; i++) {
+      const delay = Math.random() * 3000;
+      setTimeout(() => {
+        const billFile = bills[Math.floor(Math.random() * bills.length)];
+        console.log("Trying to load:", billFile);
+
+        const bill = document.createElement('img');
+        bill.src = billFile;
+        bill.alt = "money bill";
+        bill.className = 'money-bill';
+
+        // Random drift distance between -50px and +50px
+        const drift = Math.floor(Math.random() * 100) - 50;
+        const animName = `fall-${i}`;
+        addKeyframes(animName, drift);
+
+        // Random fall duration between 3–6 seconds
+        const duration = (Math.random() * 3 + 3).toFixed(2);
+
+        bill.style.left = Math.floor(Math.random() * 100) + 'vw';
+        bill.style.animation = `${animName} ${duration}s linear forwards`;
+
+        document.body.appendChild(bill);
+      }, delay);
+    }
+  }
+
+  // Hook up the Celebrate button
+  document.getElementById("celebrate-button").addEventListener("click", makeItRain);
+</script>
 
 </body>
 </html>
+
 
 
 
