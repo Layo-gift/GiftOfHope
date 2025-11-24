@@ -689,19 +689,30 @@ h1 {
   background-color: #218838;
 }
 
+/* Money Bill Styling */
 .money-bill {
-  position: fixed;                /* attach to the screen */
-  top: -120px;                    /* start above viewport */
-  width: 120px;                   /* adjust size */
-  height: auto;                   /* keep proportions */
-  animation: fall 4.5s linear forwards !important;  /* force animation */
-  pointer-events: none;           /* don’t block clicks */
-  z-index: 9999;                  /* stay above other elements */
+  position: fixed;
+  top: -120px;
+  width: 120px;
+  z-index: 9999;
+  pointer-events: none;
 }
 
-@keyframes fall {
-  from { top: -120px; }
-  to   { top: 100vh; }            /* fall to bottom of screen */
+/* Celebrate Button Styling */
+.celebrate-button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.celebrate-button:hover {
+  background-color: #218838;
 }
 
 
