@@ -709,15 +709,6 @@ h1 {
   100% { transform: translateY(100vh) rotate(90deg); opacity: 0; }
 }
 
-.money-bill {
-  position: fixed;
-  top: -120px;        /* start above the screen */
-  width: 80px;        /* adjust size of bills */
-  height: auto;
-  pointer-events: none; /* bills don’t block clicks */
-  z-index: 9999;      /* keep bills on top */
-}
-
 .bill {
   position: absolute;
   top: -150px;       /* start above the screen */
@@ -736,6 +727,10 @@ h1 {
     opacity: 0.8;
   }
 }
+
+
+
+
 
 
 
