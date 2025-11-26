@@ -718,6 +718,25 @@ h1 {
   z-index: 9999;      /* keep bills on top */
 }
 
+.bill {
+  position: absolute;
+  top: -150px;       /* start above the screen */
+  left: 50%;         /* center horizontally */
+  width: 120px;
+  animation: fall 4s linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
 
 
 
