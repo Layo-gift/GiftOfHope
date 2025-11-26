@@ -232,7 +232,12 @@
     `;
     styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
   }
-
+const bills = [
+  'images/dollar20.png',
+  'images/dollar10.png',
+  'images/dollar5.png',
+  'images/dollar1.png'
+];
   // 2. Main function: makes the bills fall
   function makeItRain() {
     console.log("makeItRain function is ready!");
@@ -243,12 +248,6 @@
       setTimeout(() => {
         const billFile = bills[Math.floor(Math.random() * bills.length)];
         console.log("Trying to load:", billFile);
-const bills = [
-  'images/dollar20.png',
-  'images/dollar10.png',
-  'images/dollar5.png',
-  'images/dollar1.png'
-];
 
         const bill = document.createElement('img');
         bill.src = billFile;
@@ -278,6 +277,7 @@ window.onload = function() {
 </script>
 </body>
 </html>
+
 
 
 
