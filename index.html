@@ -244,6 +244,12 @@
       setTimeout(() => {
         const billFile = bills[Math.floor(Math.random() * bills.length)];
         console.log("Trying to load:", billFile);
+const bills = [
+  'images/dollar20.png',
+  'images/dollar10.png',
+  'images/dollar5.png',
+  'images/dollar1.png'
+];
 
         const bill = document.createElement('img');
         bill.src = billFile;
@@ -273,6 +279,7 @@ window.onload = function() {
 </script>
 </body>
 </html>
+
 
 
 
