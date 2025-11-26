@@ -708,8 +708,32 @@ h1 {
   50%  { transform: translateY(50vh) rotate(45deg); opacity: 0.9; }
   100% { transform: translateY(100vh) rotate(90deg); opacity: 0; }
 }
+button.celebrate-button {
+  margin: 20px auto;
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #f4c542;   /* golden yellow */
+  color: #333;                 /* dark text */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect */
+button.celebrate-button:hover {
+  background-color: #ffd84d;   /* brighter yellow */
+  transform: scale(1.05);      /* slight grow */
+}
+
+/* Active (when clicked) */
+button.celebrate-button:active {
+  background-color: #e0b000;   /* deeper gold */
+  transform: scale(0.95);      /* slight press */
+}
 
 }
+
 
 
 
