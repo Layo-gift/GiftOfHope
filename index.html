@@ -221,56 +221,8 @@
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <script>
-  // 1. Helper function: creates unique keyframes for each bill
-  function addKeyframes(name, drift) {
-    const styleSheet = document.styleSheets[0];
-    const keyframes = `
-      @keyframes ${name} {
-        0%   { transform: translateY(-120px) rotate(0deg); opacity: 1; }
-        50%  { transform: translateY(50vh) rotate(45deg) translateX(${drift/2}px); opacity: 0.9; }
-        100% { transform: translateY(100vh) rotate(90deg) translateX(${drift}px); opacity: 0; }
-      }
-    `;
-    styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
-  }
-const bills = [
-  'images/dollar20.png',
-  'images/dollar10.png',
-  'images/dollar5.png',
-  'images/dollar1.png'
-];
-function makeItRainConfetti() {
-  for (let i = 0; i < 30; i++) {
-    const confetti = document.createElement("div");
-    confetti.classList.add("confetti");
 
-    // Randomize color
-    const colors = ["red", "blue", "green", "yellow", "purple", "orange"];
-    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 
-    // Randomize horizontal position
-    confetti.style.left = Math.random() * 100 + "vw";
-
-    // Randomize size
-    const size = Math.random() * 8 + 4;
-    confetti.style.width = size + "px";
-    confetti.style.height = size + "px";
-
-    // Place at top of screen
-    confetti.style.top = "-10px";
-
-    document.body.appendChild(confetti);
-
-    // Remove after animation
-    setTimeout(() => {
-      confetti.remove();
-    }, 3000);
-  }
-}
-
-// Hook Celebrate button
-document.querySelector(".celebrate-button")
-  .addEventListener("click", makeItRainConfetti);
 
 
 
