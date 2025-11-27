@@ -256,6 +256,9 @@ function makeItRainConfetti() {
     confetti.style.width = size + "px";
     confetti.style.height = size + "px";
 
+    // Place at top of screen
+    confetti.style.top = "-10px";
+
     document.body.appendChild(confetti);
 
     // Remove after animation
@@ -266,18 +269,8 @@ function makeItRainConfetti() {
 }
 
 // Hook Celebrate button
-document.querySelector(".celebrate-button").addEventListener("click", makeItRainConfetti);
-
-  }
-
- // 3. Hook up the Celebrate button
-window.onload = function() {
-  document.querySelector(".celebrate-button")
-    .addEventListener("click", makeItRain);
-};
-</script>
-</body>
-</html>
+document.querySelector(".celebrate-button")
+  .addEventListener("click", makeItRainConfetti);
 
 
 
