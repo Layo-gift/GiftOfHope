@@ -696,80 +696,8 @@ button.celebrate-button:hover {
 button.celebrate-button:active {
   background-color: #e0b000;  /* deeper gold */
   transform: scale(0.95);
-}
 
-/* Money Bill Styling */
-.money-bill {
-  position: absolute;
-  top: -120px;
-  width: 80px;
-  height: auto;
-  z-index: 9999;
-  pointer-events: none;
-  opacity: 1;   /* force visible */
-  transform: rotate(0deg);
-  animation: fall 5s linear forwards;
 }
-
-@keyframes fall {
-  0%   { transform: translateY(-120px) rotate(0deg); opacity: 1; }
-  50%  { transform: translateY(50vh) rotate(45deg); opacity: 1; }
-  100% { transform: translateY(100vh) rotate(90deg); opacity: 1; } /* keep visible */
-}
-
-.money-bill {
-  position: fixed !important;   /* lock to viewport, not page flow */
-  top: 0;                       /* start at top */
-  left: 50%;                    /* center horizontally */
-  width: 80px;
-  height: auto;
-  z-index: 9999;
-  opacity: 1 !important;        /* force visible */
-  pointer-events: none;
-  animation: fall 5s linear forwards;
-}
-
-@keyframes fall {
-  0%   { transform: translateY(-120px) rotate(0deg); opacity: 1; }
-  50%  { transform: translateY(50vh) rotate(45deg); opacity: 1; }
-  100% { transform: translateY(100vh) rotate(90deg); opacity: 1; }
-}
-
-.money-bill {
-  position: fixed !important;   /* lock to viewport */
-  top: 0;                       /* start at top */
-  left: 50%;                    /* center horizontally */
-  width: 80px;
-  height: auto;
-  z-index: 9999;
-  opacity: 1 !important;        /* force visible */
-  pointer-events: none;
-  animation: fall 5s linear forwards;
-}
-
-@keyframes fall {
-  0%   { transform: translateY(-120px) rotate(0deg); opacity: 1; }
-  50%  { transform: translateY(50vh) rotate(45deg); opacity: 1; }
-  100% { transform: translateY(100vh) rotate(90deg); opacity: 1; }
-}
-
-.confetti {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  top: -10px;
-  left: 50%;
-  opacity: 1;
-  z-index: 9999;
-  animation: fallConfetti 3s linear forwards;
-}
-
-@keyframes fallConfetti {
-  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(100vh) rotate(360deg); opacity: 1; }
-}
-
 
 
 
