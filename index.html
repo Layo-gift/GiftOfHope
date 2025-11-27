@@ -239,35 +239,35 @@ const bills = [
   'images/dollar5.png',
   'images/dollar1.png'
 ];
-  // 2. Main function: makes the bills fall
-  function makeItRain() {
-    console.log("makeItRain function is ready!");
-    const bills = ['dollar20.png', 'dollar10.png', 'dollar5.png', 'dollar1.png'];
+function makeItRainConfetti() {
+  for (let i = 0; i < 30; i++) {
+    const confetti = document.createElement("div");
+    confetti.classList.add("confetti");
 
-    for (let i = 0; i < 20; i++) {
-      const delay = Math.random() * 3000;
-      setTimeout(() => {
-        const billFile = bills[Math.floor(Math.random() * bills.length)];
-        console.log("Trying to load:", billFile);
+    // Randomize color
+    const colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 
-        const bill = document.createElement('img');
-        bill.src = billFile;
-        bill.alt = "money bill";
-        bill.className = 'money-bill';
+    // Randomize horizontal position
+    confetti.style.left = Math.random() * 100 + "vw";
 
-        const drift = Math.floor(Math.random() * 100) - 50;
-        const animName = `fall-${i}`;
-        addKeyframes(animName, drift);
+    // Randomize size
+    const size = Math.random() * 8 + 4;
+    confetti.style.width = size + "px";
+    confetti.style.height = size + "px";
 
-        const duration = (Math.random() * 3 + 3).toFixed(2);
+    document.body.appendChild(confetti);
 
-        bill.style.left = Math.floor(Math.random() * 100) + 'vw';
-        bill.style.animation = `${animName} ${duration}s linear forwards`;
+    // Remove after animation
+    setTimeout(() => {
+      confetti.remove();
+    }, 3000);
+  }
+}
 
+// Hook Celebrate button
+document.querySelector(".celebrate-button").addEventListener("click", makeItRainConfetti);
 
-        document.body.appendChild(bill);
-      }, delay);
-    }
   }
 
  // 3. Hook up the Celebrate button
@@ -278,6 +278,7 @@ window.onload = function() {
 </script>
 </body>
 </html>
+
 
 
 
