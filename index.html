@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Gift of Hope</title>
     <link rel="stylesheet" href="Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   </head>
   <body>
 
@@ -136,7 +137,7 @@
   <form class="contact-form" action="https://formspree.io/f/mjkpqnla" method="POST">
   <label for="referral">Referral Name:</label>
   <input type="text" id="referral" name="referral" required>
-<button type="button" class="celebrate-button">Celebrate!</button>
+
 
   <label for="name">Your Name:</label>
      
@@ -215,39 +216,32 @@
     <source src="heart-full-of-love-instrumental-207269 (4).mp3" type="audio/mpeg">
   </audio>
 </footer>
+<button type="button" class="celebrate-button">Celebrate!</button>
 
 <!-- AOS animation script -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
 <script>
-
-function emojiBurst() {
-  for (let i = 0; i < 30; i++) {
-    const emoji = document.createElement("div");
-    emoji.textContent = Math.random() > 0.5 ? "🌱" : "💵"; // pick one
-    emoji.style.position = "fixed";
-    emoji.style.left = Math.random() * 100 + "vw";
-    emoji.style.top = "-20px";
-    emoji.style.fontSize = (Math.random() * 20 + 20) + "px";
-    emoji.style.zIndex = 9999;
-    emoji.style.animation = "fallEmoji 3s linear forwards";
-
-    document.body.appendChild(emoji);
-
-    setTimeout(() => {
-      emoji.remove();
-    }, 3000);
+  function emojiBurst() {
+    for (let i = 0; i < 30; i++) {
+      const emoji = document.createElement("div");
+      emoji.textContent = Math.random() > 0.5 ? "🌱" : "💵";
+      emoji.style.position = "fixed";
+      emoji.style.left = Math.random() * 100 + "vw";
+      emoji.style.top = "-20px";
+      emoji.style.fontSize = (Math.random() * 20 + 20) + "px";
+      emoji.style.zIndex = 9999;
+      emoji.style.animation = "fallEmoji 3s linear forwards";
+      document.body.appendChild(emoji);
+      setTimeout(() => { emoji.remove(); }, 3000);
+    }
   }
-}
 
-document.querySelector(".celebrate-button")
-  .addEventListener("click", emojiBurst);
+  document.querySelector(".celebrate-button")
+    .addEventListener("click", emojiBurst);
+</script>
 
-
-
-
-
+</body>
+</html>
 
 
 
