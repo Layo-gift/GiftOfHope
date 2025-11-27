@@ -222,6 +222,28 @@
 
 <script>
 
+function emojiBurst() {
+  for (let i = 0; i < 30; i++) {
+    const emoji = document.createElement("div");
+    emoji.textContent = Math.random() > 0.5 ? "🌱" : "💵"; // pick one
+    emoji.style.position = "fixed";
+    emoji.style.left = Math.random() * 100 + "vw";
+    emoji.style.top = "-20px";
+    emoji.style.fontSize = (Math.random() * 20 + 20) + "px";
+    emoji.style.zIndex = 9999;
+    emoji.style.animation = "fallEmoji 3s linear forwards";
+
+    document.body.appendChild(emoji);
+
+    setTimeout(() => {
+      emoji.remove();
+    }, 3000);
+  }
+}
+
+document.querySelector(".celebrate-button")
+  .addEventListener("click", emojiBurst);
+
 
 
 
