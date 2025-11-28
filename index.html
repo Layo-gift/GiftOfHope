@@ -252,6 +252,36 @@ document.getElementById("celebrate-btn").addEventListener("click", () => {
   }
 });
 </script>
+<!-- Test #4: One falling emoji -->
+<button id="celebrate-btn">Celebrate!</button>
+
+<style>
+  .falling-item {
+    position: fixed;
+    top: -50px;
+    font-size: 2rem;
+    animation: fall 2s linear forwards;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  @keyframes fall {
+    to { transform: translateY(100vh); opacity: 0; }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('celebrate-btn');
+    btn.addEventListener('click', function () {
+      const item = document.createElement('div');
+      item.className = 'falling-item';
+      item.textContent = '💵'; // one emoji
+      item.style.left = Math.random() * window.innerWidth + 'px';
+      document.body.appendChild(item);
+      setTimeout(() => item.remove(), 2000);
+    });
+  });
+</script>
 
 // Create new items every 500ms
 setInterval(createFallingItem, 500);
@@ -259,6 +289,7 @@ setInterval(createFallingItem, 500);
 
 </body>
 </html>
+
 
 
 
