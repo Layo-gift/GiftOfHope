@@ -224,34 +224,28 @@
   document.querySelector(".celebrate-button")
     .addEventListener("click", emojiBurst);
 <script>
-// Function to create a falling emoji
 function createFallingItem() {
   const item = document.createElement("div");
   item.classList.add("falling-item");
 
-  // Emoji options only
-  const options = ["💵", "💸", "🤑"];
+  // Dove + envelope emojis
+  const options = ["🕊️", "✉️", "🕊️✉️", "🎁"];
   const choice = options[Math.floor(Math.random() * options.length)];
   item.textContent = choice;
 
-  // Random horizontal position
   item.style.left = Math.random() * window.innerWidth + "px";
-
   document.body.appendChild(item);
 
-  // Remove after animation
-  setTimeout(() => {
-    item.remove();
-  }, 6000);
+  setTimeout(() => { item.remove(); }, 6000);
 }
 
-// Attach to Celebrate button
 document.getElementById("celebrate-btn").addEventListener("click", () => {
   for (let i = 0; i < 20; i++) {
     setTimeout(createFallingItem, i * 200);
   }
 });
 </script>
+
 <!-- Test #4: One falling emoji -->
 <style>
   .falling-item {
@@ -283,6 +277,7 @@ document.getElementById("celebrate-btn").addEventListener("click", () => {
 
 </body>
 </html>
+
 
 
 
