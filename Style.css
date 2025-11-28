@@ -721,6 +721,18 @@ button.celebrate-button:active {
   transform: scale(1.05);
 }
 
+/* Falling emoji animation */
+@keyframes fallEmoji {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(200vh); /* fall through the whole page */
+    opacity: 0.8;
+  }
+}
+
 
 
 
