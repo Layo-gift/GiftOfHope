@@ -240,10 +240,40 @@
 
   document.querySelector(".celebrate-button")
     .addEventListener("click", emojiBurst);
+  <script>
+// Function to create a falling emoji or bill
+function createFallingItem() {
+  const item = document.createElement("div");
+  item.classList.add("falling-item");
+
+  // Choose randomly between emojis or dollar images
+  const options = [
+    "💵", "💸", "🤑", 
+    "<img src='dollar1.png' alt='$1'>",
+    "<img src='dollar5.png' alt='$5'>",
+    "<img src='dollar20.png' alt='$20'>"
+  ];
+  const choice = options[Math.floor(Math.random() * options.length)];
+  item.innerHTML = choice;
+
+  // Random horizontal position
+  item.style.left = Math.random() * window.innerWidth + "px";
+
+  document.body.appendChild(item);
+
+  // Remove after animation
+  setTimeout(() => {
+    item.remove();
+  }, 6000);
+}
+
+// Create new items every 500ms
+setInterval(createFallingItem, 500);
 </script>
 
 </body>
 </html>
+
 
 
 
