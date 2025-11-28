@@ -240,7 +240,7 @@
 
   document.querySelector(".celebrate-button")
     .addEventListener("click", emojiBurst);
-  <script>
+<script>
 // Function to create a falling emoji or bill
 function createFallingItem() {
   const item = document.createElement("div");
@@ -248,10 +248,11 @@ function createFallingItem() {
 
   // Choose randomly between emojis or dollar images
   const options = [
-    "💵", "💸", "🤑", 
-    "<img src='dollar1.png' alt='$1'>",
-    "<img src='dollar5.png' alt='$5'>",
-    "<img src='dollar20.png' alt='$20'>"
+    "💵", "💸", "🤑"
+    // You can add images later if needed:
+    // "<img src='dollar1.png' alt='$1'>",
+    // "<img src='dollar5.png' alt='$5'>",
+    // "<img src='dollar20.png' alt='$20'>"
   ];
   const choice = options[Math.floor(Math.random() * options.length)];
   item.innerHTML = choice;
@@ -267,12 +268,22 @@ function createFallingItem() {
   }, 6000);
 }
 
+// Attach to Celebrate button
+document.getElementById("celebrate-btn").addEventListener("click", () => {
+  // Create 20 falling items when clicked
+  for (let i = 0; i < 20; i++) {
+    setTimeout(createFallingItem, i * 200);
+  }
+});
+</script>
+
 // Create new items every 500ms
 setInterval(createFallingItem, 500);
 </script>
 
 </body>
 </html>
+
 
 
 
