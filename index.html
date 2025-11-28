@@ -220,42 +220,19 @@
 
 <!-- AOS animation script -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  function emojiBurst() {
-    for (let i = 0; i < 30; i++) {
-      const emoji = document.createElement("div");
-      emoji.textContent = Math.random() > 0.5 ? "🌱" : "💵";
-      emoji.style.position = "fixed";
-      emoji.style.left = Math.random() * 100 + "vw";
-   emoji.style.top = "0px";
-
-      emoji.style.fontSize = (Math.random() * 20 + 20) + "px";
-      emoji.style.zIndex = 9999;
-  emoji.style.animation = "fallEmoji 7s linear forwards";
-
-      document.body.appendChild(emoji);
-      setTimeout(() => { emoji.remove(); }, 3000);
-    }
-  }
 
   document.querySelector(".celebrate-button")
     .addEventListener("click", emojiBurst);
 <script>
-// Function to create a falling emoji or bill
+// Function to create a falling emoji
 function createFallingItem() {
   const item = document.createElement("div");
   item.classList.add("falling-item");
 
-  // Choose randomly between emojis or dollar images
-  const options = [
-    "💵", "💸", "🤑"
-    // You can add images later if needed:
-    // "<img src='dollar1.png' alt='$1'>",
-    // "<img src='dollar5.png' alt='$5'>",
-    // "<img src='dollar20.png' alt='$20'>"
-  ];
+  // Emoji options only
+  const options = ["💵", "💸", "🤑"];
   const choice = options[Math.floor(Math.random() * options.length)];
-  item.innerHTML = choice;
+  item.textContent = choice;
 
   // Random horizontal position
   item.style.left = Math.random() * window.innerWidth + "px";
@@ -270,7 +247,6 @@ function createFallingItem() {
 
 // Attach to Celebrate button
 document.getElementById("celebrate-btn").addEventListener("click", () => {
-  // Create 20 falling items when clicked
   for (let i = 0; i < 20; i++) {
     setTimeout(createFallingItem, i * 200);
   }
@@ -283,6 +259,7 @@ setInterval(createFallingItem, 500);
 
 </body>
 </html>
+
 
 
 
