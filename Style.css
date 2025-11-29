@@ -699,12 +699,6 @@ button.celebrate-button:active {
 
 }
 
-
-@keyframes fallEmoji {
-  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
-}
-
 .celebrate-button {
   background-color: #4CAF50;
   color: white;
@@ -719,18 +713,6 @@ button.celebrate-button:active {
 .celebrate-button:hover {
   background-color: #45a049;
   transform: scale(1.05);
-}
-
-/* Falling emoji animation */
-@keyframes fallEmoji {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(200vh); /* fall through the whole page */
-    opacity: 0.8;
-  }
 }
 
 .falling-item {
@@ -787,6 +769,7 @@ button.celebrate-button:active {
     opacity: 0;
   }
 }
+
 
 
 
