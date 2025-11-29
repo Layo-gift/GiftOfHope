@@ -771,6 +771,23 @@ button.celebrate-button:active {
   }
 }
 
+.falling-item {
+  position: fixed;
+  top: -80px;
+  width: 100px;   /* adjust size */
+  height: auto;
+  animation: fall 6s linear forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
 
 
 
