@@ -675,84 +675,30 @@ h1 {
 
 
 /* Celebrate Button Styling */
-button.celebrate-button {
+#celebrate-btn {
   display: block;
   margin: 15px auto;
   padding: 12px 24px;
   font-size: 18px;
-  background-color: #f4c542;  /* golden yellow */
-  color: #333;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-button.celebrate-button:hover {
-  background-color: #ffd84d;  /* brighter yellow */
-  transform: scale(1.05);
-}
-
-button.celebrate-button:active {
-  background-color: #e0b000;  /* deeper gold */
-  transform: scale(0.95);
-
-}
-
-.celebrate-button {
-  background-color: #4CAF50;
+  background-color: #4CAF50;  /* green */
   color: white;
-  padding: 12px 24px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 18px;
   transition: background-color 0.3s, transform 0.2s;
 }
 
-.celebrate-button:hover {
+#celebrate-btn:hover {
   background-color: #45a049;
   transform: scale(1.05);
 }
 
-.falling-item {
-  position: fixed;
-  top: -50px;
-  font-size: 2rem;
-  animation: fall 6s linear forwards;
-  pointer-events: none;
-  z-index: 9999;
+#celebrate-btn:active {
+  background-color: #2e7031;
+  transform: scale(0.95);
 }
 
-.falling-item img {
-  width: 30px;
-  height: auto;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(100vh);
-    opacity: 0;
-  }
-}
-
-.falling-item {
-  position: fixed;
-  top: -50px;
-  width: 50px;   /* adjust size */
-  height: auto;
-  animation: fall 6s linear forwards;
-  pointer-events: none;
-  z-index: 9999;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(100vh);
-    opacity: 0;
-  }
-}
-
+/* Falling Dove Styling */
 .falling-item {
   position: fixed;
   top: -80px;
@@ -769,11 +715,6 @@ button.celebrate-button:active {
     opacity: 0;
   }
 }
-
-
-
-
-
 
 
 
