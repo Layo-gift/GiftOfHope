@@ -227,19 +227,10 @@
 function createFallingItem() {
   const item = document.createElement("img");
   item.classList.add("falling-item");
-
-  // Choose randomly between dove and envelope images
-  const options = ["dove.png", "envelope.png"];
-  const choice = options[Math.floor(Math.random() * options.length)];
-  item.src = choice;
-  item.alt = "Gift of Hope";
-
-  // Random horizontal position
+  item.src = "dove-envelope.png"; // use the new image
+  item.alt = "Gift of Hope Dove";
   item.style.left = Math.random() * window.innerWidth + "px";
-
   document.body.appendChild(item);
-
-  // Remove after animation
   setTimeout(() => { item.remove(); }, 6000);
 }
 
@@ -281,6 +272,7 @@ document.getElementById("celebrate-btn").addEventListener("click", () => {
 
 </body>
 </html>
+
 
 
 
