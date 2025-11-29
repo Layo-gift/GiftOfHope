@@ -220,11 +220,12 @@
 <!-- AOS animation script -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
- <script>
+<script>
 function createFallingItem() {
   const item = document.createElement("img");
   item.classList.add("falling-item");
 
+  // Randomly choose between white or gray dove
   const images = ["dove-envelope.png", "dove-envelope-gray.png"];
   const choice = images[Math.floor(Math.random() * images.length)];
 
@@ -242,6 +243,9 @@ document.getElementById("celebrate-btn").addEventListener("click", () => {
   }
 });
 </script>
+</body>
+</html>
+
 
 
 
