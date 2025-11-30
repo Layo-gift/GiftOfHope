@@ -794,8 +794,15 @@ h1 {
   width: 80px;   /* force smaller width */
   height: auto;  /* keep proportions */
 }
+.falling-item {
+  position: fixed;          /* attach to viewport */
+  bottom: -100px;           /* start just below the screen */
+  width: 80px !important;   /* force smaller size */
+  height: auto !important;  /* keep proportions */
+}
 
 }
+
 
 
 
