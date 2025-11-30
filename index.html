@@ -240,9 +240,42 @@ document.getElementById("celebrate-btn").addEventListener("click", () => {
   }
 });
 </script>
+<script>
+function createFallingItem() {
+  const item = document.createElement("img");
+  item.classList.add("falling-item");
+
+  // Randomly choose between white or gray dove
+  const images = ["dove-envelope.png", "dove-envelope-gray.png"];
+  const choice = images[Math.floor(Math.random() * images.length)];
+
+  item.src = choice;
+  item.alt = "Gift of Hope Dove";
+
+  // Random horizontal position
+  item.style.left = Math.random() * window.innerWidth + "px";
+
+  // ✅ Force vertical start at top
+  item.style.top = "-100px";
+
+  // ✅ Force smaller size
+  item.style.width = "80px";
+  item.style.height = "auto";
+
+  document.body.appendChild(item);
+  setTimeout(() => { item.remove(); }, 6000);
+}
+
+document.getElementById("celebrate-btn").addEventListener("click", () => {
+  for (let i = 0; i < 40; i++) {
+    setTimeout(createFallingItem, i * 200);
+  }
+});
+</script>
 
 </body>
 </html>
+
 
 
 
