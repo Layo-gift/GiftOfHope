@@ -222,7 +222,13 @@ function createFallingItem() {
 
   item.src = choice;
   item.alt = "Gift of Hope Dove";
+
+  // Random horizontal position
   item.style.left = Math.random() * window.innerWidth + "px";
+
+  // ✅ Force smaller size
+  item.style.width = "80px";
+  item.style.height = "auto";
 
   document.body.appendChild(item);
   setTimeout(() => { item.remove(); }, 6000);
@@ -234,8 +240,10 @@ document.getElementById("celebrate-btn").addEventListener("click", () => {
   }
 });
 </script>
+
 </body>
 </html>
+
 
 
 
