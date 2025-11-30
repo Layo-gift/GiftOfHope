@@ -790,8 +790,13 @@ h1 {
   75%  { transform: translateY(-600px) translateX(-15px) rotate(-3deg); opacity: 0.5; }
   100% { transform: translateY(-800px) translateX(15px) rotate(3deg); opacity: 0; }
 }
+.falling-item {
+  width: 80px;   /* force smaller width */
+  height: auto;  /* keep proportions */
+}
 
 }
+
 
 
 
