@@ -699,9 +699,9 @@ h1 {
 }
 
 .falling-item {
-  position: fixed;          /* attach to viewport */
-  top: -100px;              /* start just above the screen */
-  width: 80px;              /* shrink from 1024px to 80px */
+  position: fixed;          /* attach to the viewport */
+  top: -100px;              /* start just above the visible screen */
+  width: 80px;              /* ideal size */
   height: auto;
   animation: fallDown 6s linear forwards;
   pointer-events: none;
@@ -712,8 +712,8 @@ h1 {
   100% { transform: translateY(120vh); opacity: 0; }
 }
 
-
 }
+
 
 
 
