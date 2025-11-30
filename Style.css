@@ -800,8 +800,15 @@ h1 {
   width: 80px !important;   /* force smaller size */
   height: auto !important;  /* keep proportions */
 }
+.falling-item {
+  position: fixed;          /* attach to the browser window, not page content */
+  bottom: -100px;           /* start just below the visible screen */
+  width: 80px !important;   /* shrink from 1024px to 80px */
+  height: auto !important;  /* keep proportions */
+}
 
 }
+
 
 
 
