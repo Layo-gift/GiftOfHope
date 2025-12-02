@@ -216,24 +216,29 @@ function createEmoji() {
   const emoji = document.createElement("div");
   emoji.classList.add("falling-emoji");
   emoji.textContent = ["🕊️","💌","🌟","❤️","🎉"][Math.floor(Math.random()*5)];
-
   emoji.style.left = Math.random() * window.innerWidth + "px";
   emoji.style.top = "-50px";
-
   document.body.appendChild(emoji);
-
   setTimeout(() => { emoji.remove(); }, 4000);
 }
 
-document.getElementById("celebrate-btn").addEventListener("click", () => {
+function triggerCelebration() {
   for (let i = 0; i < 30; i++) {
     setTimeout(createEmoji, i * 150);
   }
+}
+
+// Attach to both buttons
+document.getElementById("celebrate-btn-top").addEventListener("click", triggerCelebration);
+document.getElementById("celebrate-btn-bottom").addEventListener("click", triggerCelebration);
+</script>
+
 });
 </script>
 
 </body>
 </html>
+
 
 
 
