@@ -209,66 +209,11 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-function createFallingItem() {
-  const item = document.createElement("img");
-  item.classList.add("falling-item");
 
-  const images = ["dove-envelope.png", "dove-envelope-gray.png"];
-  const choice = images[Math.floor(Math.random() * images.length)];
-
-  item.src = choice;
-  item.alt = "Gift of Hope Dove";
-
-  item.style.left = Math.random() * window.innerWidth + "px";
-  item.style.top = "-100px";   // ✅ start above screen
-  item.style.width = "80px";
-  item.style.height = "auto";
-
-  document.body.appendChild(item);
-  setTimeout(() => { item.remove(); }, 6000);
-}
-
-document.getElementById("celebrate-btn").addEventListener("click", () => {
-  for (let i = 0; i < 40; i++) {
-    setTimeout(createFallingItem, i * 200);
-  }
-<button id="celebrate-btn" type="button">Celebrate!</button>
-
-<script>
-function createFallingItem() {
-  const item = document.createElement("img");
-  item.classList.add("falling-item");
-
-  const images = ["dove-envelope.png", "dove-envelope-gray.png"];
-  const choice = images[Math.floor(Math.random() * images.length)];
-
-  item.src = choice;
-  item.alt = "Gift of Hope Dove";
-
-  // Random horizontal position
-  item.style.left = Math.random() * window.innerWidth + "px";
-
-  // Start above viewport
-  item.style.top = "-100px";
-
-  document.body.appendChild(item);
-
-  // Remove after animation ends
-  setTimeout(() => { item.remove(); }, 6000);
-}
-
-document.getElementById("celebrate-btn").addEventListener("click", () => {
-  for (let i = 0; i < 40; i++) {
-    setTimeout(createFallingItem, i * 200);
-  }
-});
-</script>
-</body>
-</html>
 
 </body>
 </html>
+
 
 
 
