@@ -660,86 +660,8 @@ h1 {
 }
 
 
-/* Celebrate Button Styling */
-#celebrate-btn {
-  display: block;
-  margin: 15px auto;
-  padding: 12px 24px;
-  font-size: 18px;
-  background-color: #4CAF50;  /* green */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
 
-#celebrate-btn:hover {
-  background-color: #45a049;
-  transform: scale(1.05);
-}
 
-#celebrate-btn:active {
-  background-color: #2e7031;
-  transform: scale(0.95);
-}
-
-/* Falling Dove Animation */
-.falling-item {
-  position: fixed;        /* stays relative to viewport */
-  top: -100px;            /* start above the screen */
-  width: 80px;
-  height: auto;
-  animation: fallDown 6s linear forwards;
-  pointer-events: none;   /* don’t block clicks */
-  z-index: 9999;          /* always on top */
-}
-
-@keyframes fallDown {
-  0%   { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(120vh); opacity: 0; }
-}
-/* Celebrate Button Styling */
-#celebrate-btn {
-  display: block;
-  margin: 15px auto;
-  padding: 12px 24px;
-  font-size: 18px;
-  background-color: #4CAF50;  /* green */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-#celebrate-btn:hover {
-  background-color: #45a049;
-  transform: scale(1.05);
-}
-
-#celebrate-btn:active {
-  background-color: #2e7031;
-  transform: scale(0.95);
-}
-
-/* Falling Dove Animation */
-.falling-item {
-  position: fixed;        /* relative to viewport */
-  top: -100px;            /* start above the screen */
-  width: 80px;
-  height: auto;
-  animation: fallDown 6s linear forwards;
-  pointer-events: none;   /* don’t block clicks */
-  z-index: 9999;          /* stay above everything */
-}
-
-@keyframes fallDown {
-  0%   { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(120vh); opacity: 0; }
-}
-
-}
 
 
 
