@@ -308,20 +308,6 @@ h1, h2, h3, .section-title, .section-header {
   margin-top: 10px;
   font-size: 18px;
 }
-
-.contact-form button {
-  background-color: #f39c12;
-  color: white;
-  border: none;
-  padding: 14px;
-  border-radius: 8px;
-  font-size: 18px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-.contact-form button:hover {
- background-color: #e67e22;
   
 .section-title {
   font-size: 28px;
@@ -698,13 +684,15 @@ h1 {
   transform: scale(0.95);
 }
 
+/* Falling Dove Animation */
 .falling-item {
-  position: fixed;          /* attach to the viewport */
-  top: -100px;              /* start just above the visible screen */
-  width: 80px;              /* ideal size */
+  position: fixed;        /* stays relative to viewport */
+  top: -100px;            /* start above the screen */
+  width: 80px;
   height: auto;
   animation: fallDown 6s linear forwards;
-  pointer-events: none;
+  pointer-events: none;   /* don’t block clicks */
+  z-index: 9999;          /* always on top */
 }
 
 @keyframes fallDown {
@@ -713,6 +701,7 @@ h1 {
 }
 
 }
+
 
 
 
