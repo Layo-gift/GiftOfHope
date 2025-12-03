@@ -210,12 +210,11 @@
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-
 <script>
 function createEmoji() {
   const emoji = document.createElement("div");
   emoji.classList.add("falling-emoji");
-  emoji.textContent = ["🕊️","💌","🌟","❤️","🎉"][Math.floor(Math.random()*5)];
+  emoji.textContent = ["🕊️","💌","🌟","❤️","🎉"][Math.floor(Math.random() * 5)];
   emoji.style.left = Math.random() * window.innerWidth + "px";
   emoji.style.top = "-50px";
   document.body.appendChild(emoji);
@@ -228,14 +227,14 @@ function triggerCelebration() {
   }
 }
 
-// Attach to both buttons
-document.getElementById("celebrate-btn-top").addEventListener("click", triggerCelebration);
-document.getElementById("celebrate-btn-bottom").addEventListener("click", triggerCelebration);
-
+// Event listeners removed because Celebrate buttons were deleted
 </script>
 
 </body>
 </html>
+
+
+
 
 
 
