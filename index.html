@@ -226,9 +226,31 @@ function triggerCelebration() {
     setTimeout(createEmoji, i * 150);
   }
 }
+<script>
+const form = document.querySelector(".contact-form");
+const confirmation = document.querySelector(".confirmation-message");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  // Show confirmation instantly
+  form.style.display = "none";
+  confirmation.style.display = "block";
+
+  // Send data in background
+  fetch(form.action, {
+    method: form.method,
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).catch(() => {
+    console.log("Formspree is slow, but message will still arrive.");
+  });
+});
 </script>
+
 </body>
 </html>
+
 
 
 
