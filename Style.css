@@ -752,6 +752,69 @@ h1 {
   box-sizing: border-box; /* prevents overflow issues */
 }
 
+/* General form styling */
+.contact-form {
+  max-width: 600px;       /* keeps form narrow on large screens */
+  margin: 20px auto;      /* centers form */
+  padding: 20px;
+  background: #f9f9f9;    /* light background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;            /* full width */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* prevents overflow */
+  font-size: 16px;
+}
+
+.contact-form button {
+  background: #4CAF50;    /* green button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;            /* full width on mobile */
+}
+
+.contact-form button:hover {
+  background: #45a049;
+}
+
+/* Confirmation message */
+.confirmation-message {
+  text-align: center;
+  font-size: 18px;
+  color: #2d862d;
+  margin-top: 20px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 15px;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 16px;
+  }
+}
+
 
 
 
