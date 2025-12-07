@@ -659,9 +659,86 @@ h1 {
   color: #444;
 }
 
+.contact-section {
+  padding: 20px;
+  background: #f9f9f9;
+}
 
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+}
 
+.contact-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
 
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  background-color: #002147;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #004080;
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 18px;
+  }
+
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 15px;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 16px;
+  }
+}
+
+/* Quick fix to force contact form visible on mobile */
+.contact-form,
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  display: block !important;
+  width: 100% !important;
+  visibility: visible !important;
+}
 
 
 
