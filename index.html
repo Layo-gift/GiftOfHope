@@ -27,10 +27,54 @@
     </figure>
   </div>
 
-  <section class="welcome">
-    <audio controls loop>
-      <source src="heart-full-of-love-instrumental-207269-4.mp3" type="audio/mpeg">
-    </audio>
+<section class="welcome">
+  <!-- Hidden audio element -->
+  <audio id="bg-music" loop>
+    <source src="heart-full-of-love-instrumental-207269-4.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Custom music button -->
+  <button id="music-btn">🎵 Play Music</button>
+</section>
+
+<style>
+  /* Blinking effect when music is playing */
+  .blinking {
+    animation: blink 1s infinite;
+  }
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+  }
+
+  #music-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+  }
+</style>
+
+<script>
+  const music = document.getElementById('bg-music');
+  const btn = document.getElementById('music-btn');
+
+  btn.addEventListener('click', () => {
+    if (music.paused) {
+      music.play();
+      btn.textContent = "🎵 Pause Music";
+      btn.classList.add("blinking");
+    } else {
+      music.pause();
+      btn.textContent = "🎵 Play Music";
+      btn.classList.remove("blinking");
+    }
+  });
+</script>
   
     <div class="welcome-message">
       <h2 class="welcome-title">Welcome to Gift of Hope Community</h2>
@@ -274,6 +318,7 @@ form.addEventListener("submit", (e) => {
 </html>
 
       
+
 
 
 
