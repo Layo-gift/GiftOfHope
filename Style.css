@@ -259,10 +259,14 @@ button {
 
 @keyframes blinkGlow {
   0%, 100% { text-shadow: 0 0 10px #fdd9a0; }
-  50% { text-shadow: 0 0 20px #f4a261; }body, p, .intro-message, .vision-message, .gift-message, .how-it-works, .participation-invite, .participation-hook {
+  50% { text-shadow: 0 0 20px #f4a261; }
+}
+
+body, p, .intro-message, .vision-message, .gift-message, .how-it-works, .participation-invite, .participation-hook {
   font-size: 20px;
   line-height: 1.6;
 }
+
 
 /* Font Size and Layout Fixes */
 body, p, .intro-message, .vision-message, .gift-message, .how-it-works, .participation-invite, .participation-hook {
@@ -815,6 +819,7 @@ h1 {
     font-size: 16px;
   }
 }
+
 
 
 
