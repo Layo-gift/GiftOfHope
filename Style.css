@@ -338,7 +338,11 @@ body, p, label, input, textarea, select, button {
 
 /* Bold Section Headers */
 .section-title, .how-it-works h2 {
-  font-size: 32px;/* Form Layout */
+  font-size: 32px;
+}
+
+/* Form Layout */
+
 .contact-form {
   max-width: 600px;
   margin: 40px auto;
@@ -814,6 +818,7 @@ h1 {
     font-size: 16px;
   }
 }
+
 
 
 
