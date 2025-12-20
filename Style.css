@@ -392,10 +392,7 @@ body, p, label, input, textarea, select, button {
   background-color: #e67e22;
 }
 
-  font-weight: bold;
-  text-align: center;
-  text-shadow: 0 0 10px #fdd9a0;
-  color: #2c3e50;.animated-tree {
+.animated-tree {
   animation: swayTree 6s ease-in-out infinite;
 }
 
@@ -818,6 +815,7 @@ h1 {
     font-size: 16px;
   }
 }
+
 
 
 
