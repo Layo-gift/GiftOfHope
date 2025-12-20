@@ -319,20 +319,21 @@ h1, h2, h3, .section-title, .section-header {
   color: #2c3e50;
 }
 
-.who-image-animated {
-  animation: waveFloat 4s ease-in-out infinite;.section-title {
-  font-size: 28px;
-  text-shadow: 0 0 10px #fdd9a0;
-  color: #2c3e50;
-    
-}
-  
 .section-title {
   font-size: 28px;
   text-shadow: 0 0 10px #fdd9a0;
   color: #2c3e50;
 }
 
+.who-image-animated {
+  animation: waveFloat 4s ease-in-out infinite;
+}
+
+.section-title {
+  font-size: 28px;
+  text-shadow: 0 0 10px #fdd9a0;
+  color: #2c3e50;
+}
 
 /* Global Font Size */
 body, p, label, input, textarea, select, button {
@@ -819,6 +820,7 @@ h1 {
     font-size: 16px;
   }
 }
+
 
 
 
