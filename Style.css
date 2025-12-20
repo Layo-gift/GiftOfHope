@@ -506,4 +506,35 @@ button {
     width: 100%;
     visibility: visible;
   }
+   /* ===========================
+   MUSIC BUTTON
+=========================== */
+
+#music-btn {
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #013220;
+  background-color: #4CAF50;
+  color: white;
+  margin: 20px auto;
+  display: inline-block;
 }
+
+#music-btn:hover {
+  background-color: #45a049;
+}
+
+/* Blinking effect when music is playing */
+.blinking {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+}
+
