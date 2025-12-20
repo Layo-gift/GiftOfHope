@@ -215,6 +215,25 @@
   <button type="submit">Send Message 🌱</button>
 </form>
 
+  <script>
+document.querySelector(".contact-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // Stop default redirect
+
+  const form = event.target;
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { "Accept": "application/json" }
+  }).then(response => {
+    if (response.ok) {
+      form.style.display = "none"; // Hide form
+      document.querySelector(".confirmation-message").style.display = "block"; // Show message
+    }
+  });
+});
+</script>
+
 <div class="confirmation-message">
   <p>🌱 Thank you for planting your seed of hope. Your invitation is being prepared.</p>
 </div>
@@ -298,6 +317,7 @@ form.addEventListener("submit", (e) => {
 </html>
 
       
+
 
 
 
