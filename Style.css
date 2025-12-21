@@ -536,7 +536,12 @@ button {
   50% { opacity: 0.4; }
   100% { opacity: 1; }
 }
+
+ .confirmation-message {
+  display: block !important;
+}  
 }
+
 
 
 
