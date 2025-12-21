@@ -218,11 +218,12 @@
   <p>🌱 Thank you for planting your seed of hope. Your invitation is being prepared.</p>
 </div>
   
-  <script>
+ <script>
 document.querySelector(".contact-form").addEventListener("submit", function(event) {
-  event.preventDefault(); // Stop default redirect
+  event.preventDefault();
 
   const form = event.target;
+  const confirmation = document.querySelector(".confirmation-message");
 
   fetch(form.action, {
     method: "POST",
@@ -230,8 +231,8 @@ document.querySelector(".contact-form").addEventListener("submit", function(even
     headers: { "Accept": "application/json" }
   }).then(response => {
     if (response.ok) {
-      form.style.display = "none"; // Hide form
-      document.querySelector(".confirmation-message").style.display = "block"; // Show message
+      form.style.display = "none";
+      confirmation.style.display = "block";
     }
   });
 });
@@ -316,6 +317,7 @@ form.addEventListener("submit", (e) => {
 </html>
 
       
+
 
 
 
