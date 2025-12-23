@@ -217,30 +217,10 @@
   <button type="submit">Send Message 🌱</button>
 </form>
   
- <script>
-
    <div class="confirmation-message" style="display:none;">
   <p>🌱 Thank you for planting your seed of hope. Your invitation is being prepared.</p>
 </div>
-document.querySelector(".contact-form").addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  const form = event.target;
-  const confirmation = document.querySelector(".confirmation-message");
-
-  fetch(form.action, {
-    method: "POST",
-    body: new FormData(form),
-    headers: { "Accept": "application/json" }
-  }).then(response => {
-    if (response.ok) {
-      form.style.display = "none";
-      confirmation.style.display = "block";
-    }
-  });
-});
-</script>
-
+  
 <section class="participation-section">
   <p class="participation-invite">🌱 Everyone sends the Participation Gift to three people. This ripple ensures <em>everyone receives</em>.</p>
   <p class="participation-hook">When you say <strong>“I’m in,”</strong> you’re receiving a ripple of generosity that returns <strong>month after month</strong>.</p>
@@ -267,26 +247,12 @@ document.querySelector(".contact-form").addEventListener("submit", function(even
     </p>
     <p class="final-highlight">
       🌱 You’ve planted a seed. Now let it grow.
+    </p>
+  </div>
+</footer>
+
    
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-<script>
-function createEmoji() {
-  const emoji = document.createElement("div");
-  emoji.classList.add("falling-emoji");
-  emoji.textContent = ["🕊️","💌","🌟","❤️","🎉"][Math.floor(Math.random() * 5)];
-  emoji.style.left = Math.random() * window.innerWidth + "px";
-  emoji.style.top = "-50px";
-  document.body.appendChild(emoji);
-  setTimeout(() => { emoji.remove(); }, 4000);
-}
-
-function triggerCelebration() {
-  for (let i = 0; i < 30; i++) {
-    setTimeout(createEmoji, i * 150);
-  }
-}
-</script>
 
 <script>
 const form = document.querySelector(".contact-form");
@@ -314,6 +280,7 @@ form.addEventListener("submit", (e) => {
 </html>
 
       
+
 
 
 
