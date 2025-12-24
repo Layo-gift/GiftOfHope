@@ -254,18 +254,16 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   const form = document.querySelector(".contact-form");
   const confirmation = document.querySelector(".confirmation-message");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // Show confirmation instantly
     form.style.display = "none";
     confirmation.style.display = "block";
 
-    // Send data in background
     fetch(form.action, {
       method: form.method,
       body: new FormData(form),
@@ -277,11 +275,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-
 </body>
 </html>
 
       
+
 
 
 
